@@ -1,6 +1,6 @@
 html {
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -25,10 +25,15 @@ body {
 
 .pricing-plan {
   border-bottom: 1px solid #e1f1ff;
+  transition: transform 0.3s ease-in-out;
 }
 
 .pricing-plan:last-child {
   border-bottom: none;
+}
+
+.pricing-plan:hover {
+  transform: scale(1.05);
 }
 
 .pricing-img {
@@ -80,6 +85,7 @@ body {
 .pricing-button:hover,
 .pricing-button:focus {
   background-color: #e1f1ff;
+  color: #348efe;
 }
 
 .pricing-button.is-featured {
@@ -91,6 +97,11 @@ body {
 .pricing-button.is-featured:focus {
   background-color: #269aff;
   color: white;
+}
+
+.pricing-button,
+.pricing-button.is-featured {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 @media (min-width: 900px) {
